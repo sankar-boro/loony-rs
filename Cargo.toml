@@ -1,0 +1,12 @@
+[workspace]
+workspace.resolver = "1"
+
+members = [ 
+    "loony-algo",
+    "loony-tokio"
+]
+
+exclude = [
+    "loony-tokio"  # Exclude the package from default build
+]
+# cargo build --release -p loony-tokio
