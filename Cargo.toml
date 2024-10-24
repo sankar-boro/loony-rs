@@ -1,13 +1,9 @@
 [workspace]
 
-members = [ 
-    "loony-algo",
-    "loony-tokio",
-    "loony-redis"
-]
+members = ["loony-algo", "loony-tokio", "loony-redis", "loony-rs"]
 resolver = "2"
 
 exclude = [
-    "loony-tokio"  # Exclude the package from default build
+    "loony-tokio", # Exclude the package from default build
 ]
 # cargo build --release -p loony-tokio
