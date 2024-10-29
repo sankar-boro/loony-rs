@@ -6,8 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [[bin]] # Bin to run the HelloWorld gRPC server
-name = "google_speech_client"
-path = "src/client.rs"
+name = "speech_recognizer"
+path = "src/bin/recognizer.rs"
 
 [dependencies]
 tonic = { version = "0.8.0", features = ["transport", "tls"] }
@@ -22,6 +22,9 @@ serde_path_to_error = "0.1.16"
 tokio-stream = { version = "0.1.6" }
 async-stream = { version = "0.3.2" }
 futures-core = { version = "0.3.15" }
+futures-util = "0.3.15"
+env_logger = "0.8.3"
+
 
 [build-dependencies]
 tonic-build = "0.8.0"
