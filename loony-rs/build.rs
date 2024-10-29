@@ -1,4 +1,48 @@
+// fn main() -> Result<(), Box<dyn std::error::Error>> {
+//     tonic_build::configure()
+//         .build_client(true)
+//         .build_server(false)
+//         .out_dir("src/grpc_stubs")
+//         .compile_protos(
+//             &["../res/proto/google/cloud/speech/v1p1beta1/cloud_speech.proto"],
+//             &["../res/proto"],
+//         )
+//         .unwrap();
+//     Ok(())
+// }
+
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    tonic_build::compile_protos("../proto/helloworld.proto")?;
+    tonic_build::configure()
+        .build_client(true)
+        .build_server(false)
+        .out_dir("src/grpc_stubs")
+        .compile(
+            &[
+                "../res/proto/google/cloud/dialogflow/v2/session.proto",
+                "../res/proto/google/cloud/dialogflow/v2beta1/session.proto",
+                "../res/proto/google/cloud/speech/v1/cloud_speech.proto",
+                "../res/proto/google/cloud/speech/v1p1beta1/cloud_speech.proto",
+                "../res/proto/google/cloud/texttospeech/v1/cloud_tts.proto",
+                "../res/proto/google/cloud/texttospeech/v1beta1/cloud_tts.proto",
+            ],
+            &["../res/proto"],
+        )
+        .unwrap();
+
+    // building dialogflow cx separately as
+    // it needs to be in nested folder
+    tonic_build::configure()
+        .build_client(true)
+        .build_server(false)
+        .out_dir("src/grpc_stubs/dialogflow_cx")
+        .compile(
+            &[
+                "../res/proto/google/cloud/dialogflow/cx/v3/session.proto",
+                "../res/proto/google/cloud/dialogflow/cx/v3beta1/session.proto",
+            ],
+            &["../res/proto"],
+        )
+        .unwrap();
+
     Ok(())
 }

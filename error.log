@@ -1,0 +1,1664 @@
+   Compiling loony-rs v0.1.0 (/home/sankar/projects/loony-rs/loony-rs)
+error[E0432]: unresolved import `log`
+  --> loony-rs/src/speechtotext/recognizer_beta.rs:31:5
+   |
+31 | use log::*;
+   |     ^^^ use of undeclared crate or module `log`
+
+error: cannot find macro `trace` in this scope
+   --> loony-rs/src/speechtotext/recognizer_beta.rs:222:21
+    |
+222 |                     trace!("streaming_recognize: entering loop");
+    |                     ^^^^^
+
+error: cannot find macro `trace` in this scope
+   --> loony-rs/src/speechtotext/recognizer_beta.rs:226:21
+    |
+226 |                     trace!("streaming_recognize: leaving loop");
+    |                     ^^^^^
+
+error: cannot find macro `error` in this scope
+   --> loony-rs/src/speechtotext/recognizer_beta.rs:293:33
+    |
+293 | ...                   error!("Recognizer.long_running_wait rpc error {:?}", rpc_status);
+    |                       ^^^^^
+
+error[E0277]: the trait bound `ListOperationsRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:276:41
+    |
+276 |             self.inner.unary(req, path, codec).await
+    |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `ListOperationsRequest`, which is required by `ProstCodec<_, _>: Codec`
+    |                        |
+    |                        required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<ListOperationsRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `ListOperationsRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:276:13
+    |
+276 |             self.inner.unary(req, path, codec).await
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `ListOperationsRequest`, which is required by `ProstCodec<ListOperationsRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<ListOperationsRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `ListOperationsRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:276:48
+    |
+276 |             self.inner.unary(req, path, codec).await
+    |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `ListOperationsRequest`, which is required by `ProstCodec<ListOperationsRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<ListOperationsRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `ListOperationsResponse: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:276:41
+    |
+276 |             self.inner.unary(req, path, codec).await
+    |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `ListOperationsResponse`, which is required by `ProstCodec<_, _>: Codec`
+    |                        |
+    |                        required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<ListOperationsRequest, ListOperationsResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `ListOperationsResponse: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:276:13
+    |
+276 |             self.inner.unary(req, path, codec).await
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `ListOperationsResponse`, which is required by `ProstCodec<ListOperationsRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<ListOperationsRequest, ListOperationsResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `ListOperationsResponse: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:276:48
+    |
+276 |             self.inner.unary(req, path, codec).await
+    |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `ListOperationsResponse`, which is required by `ProstCodec<ListOperationsRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<ListOperationsRequest, ListOperationsResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `GetOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:302:41
+    |
+302 |             self.inner.unary(req, path, codec).await
+    |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `GetOperationRequest`, which is required by `ProstCodec<_, _>: Codec`
+    |                        |
+    |                        required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<GetOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `GetOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:302:13
+    |
+302 |             self.inner.unary(req, path, codec).await
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `GetOperationRequest`, which is required by `ProstCodec<GetOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<GetOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `GetOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:302:48
+    |
+302 |             self.inner.unary(req, path, codec).await
+    |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `GetOperationRequest`, which is required by `ProstCodec<GetOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<GetOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:302:41
+    |
+302 |             self.inner.unary(req, path, codec).await
+    |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<_, _>: Codec`
+    |                        |
+    |                        required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<GetOperationRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:302:13
+    |
+302 |             self.inner.unary(req, path, codec).await
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<GetOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<GetOperationRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:302:48
+    |
+302 |             self.inner.unary(req, path, codec).await
+    |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<GetOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<GetOperationRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `DeleteOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:329:41
+    |
+329 |             self.inner.unary(req, path, codec).await
+    |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `DeleteOperationRequest`, which is required by `ProstCodec<_, _>: Codec`
+    |                        |
+    |                        required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<DeleteOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `DeleteOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:329:13
+    |
+329 |             self.inner.unary(req, path, codec).await
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `DeleteOperationRequest`, which is required by `ProstCodec<DeleteOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<DeleteOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `DeleteOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:329:48
+    |
+329 |             self.inner.unary(req, path, codec).await
+    |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `DeleteOperationRequest`, which is required by `ProstCodec<DeleteOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<DeleteOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `CancelOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:362:41
+    |
+362 |             self.inner.unary(req, path, codec).await
+    |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `CancelOperationRequest`, which is required by `ProstCodec<_, _>: Codec`
+    |                        |
+    |                        required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<CancelOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `CancelOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:362:13
+    |
+362 |             self.inner.unary(req, path, codec).await
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `CancelOperationRequest`, which is required by `ProstCodec<CancelOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<CancelOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `CancelOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:362:48
+    |
+362 |             self.inner.unary(req, path, codec).await
+    |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `CancelOperationRequest`, which is required by `ProstCodec<CancelOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<CancelOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `WaitOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:394:41
+    |
+394 |             self.inner.unary(req, path, codec).await
+    |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `WaitOperationRequest`, which is required by `ProstCodec<_, _>: Codec`
+    |                        |
+    |                        required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<WaitOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `WaitOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:394:13
+    |
+394 |             self.inner.unary(req, path, codec).await
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `WaitOperationRequest`, which is required by `ProstCodec<WaitOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<WaitOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `WaitOperationRequest: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:394:48
+    |
+394 |             self.inner.unary(req, path, codec).await
+    |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `WaitOperationRequest`, which is required by `ProstCodec<WaitOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<WaitOperationRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:394:41
+    |
+394 |             self.inner.unary(req, path, codec).await
+    |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<_, _>: Codec`
+    |                        |
+    |                        required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<WaitOperationRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:394:13
+    |
+394 |             self.inner.unary(req, path, codec).await
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<WaitOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<WaitOperationRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:394:48
+    |
+394 |             self.inner.unary(req, path, codec).await
+    |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<WaitOperationRequest, _>: Codec`
+    |
+    = help: the following other types implement trait `prost::message::Message`:
+              ()
+              Box<M>
+              Vec<u8>
+              bool
+              f32
+              f64
+              i32
+              i64
+            and 4 others
+    = note: required for `ProstCodec<WaitOperationRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+   --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+    |
+140 |     pub async fn unary<M1, M2, C>(
+    |                  ----- required by a bound in this associated function
+...
+150 |         C: Codec<Encode = M1, Decode = M2>,
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::RecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1037:60
+     |
+1037 |             self.inner.unary(request.into_request(), path, codec).await
+     |                        -----                               ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::RecognizeRequest`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::RecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::RecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1037:13
+     |
+1037 |             self.inner.unary(request.into_request(), path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::RecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::RecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::RecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::RecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1037:67
+     |
+1037 |             self.inner.unary(request.into_request(), path, codec).await
+     |                                                                   ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::RecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::RecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::RecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::RecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1037:60
+     |
+1037 |             self.inner.unary(request.into_request(), path, codec).await
+     |                        -----                               ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::RecognizeResponse`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::RecognizeRequest, grpc::google::cloud::speechtotext::v1::RecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::RecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1037:13
+     |
+1037 |             self.inner.unary(request.into_request(), path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::RecognizeResponse`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::RecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::RecognizeRequest, grpc::google::cloud::speechtotext::v1::RecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::RecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1037:67
+     |
+1037 |             self.inner.unary(request.into_request(), path, codec).await
+     |                                                                   ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::RecognizeResponse`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::RecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::RecognizeRequest, grpc::google::cloud::speechtotext::v1::RecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1065:60
+     |
+1065 |             self.inner.unary(request.into_request(), path, codec).await
+     |                        -----                               ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1065:13
+     |
+1065 |             self.inner.unary(request.into_request(), path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1065:67
+     |
+1065 |             self.inner.unary(request.into_request(), path, codec).await
+     |                                                                   ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1065:60
+     |
+1065 |             self.inner.unary(request.into_request(), path, codec).await
+     |                        -----                               ^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1065:13
+     |
+1065 |             self.inner.unary(request.into_request(), path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1065:67
+     |
+1065 |             self.inner.unary(request.into_request(), path, codec).await
+     |                                                                   ^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::LongRunningRecognizeRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1091:74
+     |
+1091 |             self.inner.streaming(request.into_streaming_request(), path, codec).await
+     |                        ---------                                         ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1091:13
+     |
+1091 |             self.inner.streaming(request.into_streaming_request(), path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1091:81
+     |
+1091 |             self.inner.streaming(request.into_streaming_request(), path, codec).await
+     |                                                                                 ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::StreamingRecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1091:74
+     |
+1091 |             self.inner.streaming(request.into_streaming_request(), path, codec).await
+     |                        ---------                                         ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::StreamingRecognizeResponse`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<StreamingRecognizeRequest, StreamingRecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+     = note: the full name for the type has been written to '/home/sankar/projects/loony-rs/target/release/deps/loony_rs-38360343e0bb5211.long-type-9042367936832792192.txt'
+     = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::StreamingRecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1091:13
+     |
+1091 |             self.inner.streaming(request.into_streaming_request(), path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::StreamingRecognizeResponse`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<StreamingRecognizeRequest, StreamingRecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+     = note: the full name for the type has been written to '/home/sankar/projects/loony-rs/target/release/deps/loony_rs-38360343e0bb5211.long-type-9042367936832792192.txt'
+     = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1::StreamingRecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1.rs:1091:81
+     |
+1091 |             self.inner.streaming(request.into_streaming_request(), path, codec).await
+     |                                                                                 ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1::StreamingRecognizeResponse`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1::StreamingRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<StreamingRecognizeRequest, StreamingRecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+     = note: the full name for the type has been written to '/home/sankar/projects/loony-rs/target/release/deps/loony_rs-38360343e0bb5211.long-type-9042367936832792192.txt'
+     = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1287:41
+     |
+1287 |             self.inner.unary(req, path, codec).await
+     |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1287:13
+     |
+1287 |             self.inner.unary(req, path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1287:48
+     |
+1287 |             self.inner.unary(req, path, codec).await
+     |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1287:41
+     |
+1287 |             self.inner.unary(req, path, codec).await
+     |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeResponse`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest, grpc::google::cloud::speechtotext::v1p1beta1::RecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1287:13
+     |
+1287 |             self.inner.unary(req, path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeResponse`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest, grpc::google::cloud::speechtotext::v1p1beta1::RecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1287:48
+     |
+1287 |             self.inner.unary(req, path, codec).await
+     |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::RecognizeResponse`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::RecognizeRequest, grpc::google::cloud::speechtotext::v1p1beta1::RecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1322:41
+     |
+1322 |             self.inner.unary(req, path, codec).await
+     |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1322:13
+     |
+1322 |             self.inner.unary(req, path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1322:48
+     |
+1322 |             self.inner.unary(req, path, codec).await
+     |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1322:41
+     |
+1322 |             self.inner.unary(req, path, codec).await
+     |                        -----            ^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1322:13
+     |
+1322 |             self.inner.unary(req, path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `Operation: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1322:48
+     |
+1322 |             self.inner.unary(req, path, codec).await
+     |                                                ^^^^^ the trait `prost::message::Message` is not implemented for `Operation`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::LongRunningRecognizeRequest, Operation>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::unary`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:150:12
+     |
+140  |     pub async fn unary<M1, M2, C>(
+     |                  ----- required by a bound in this associated function
+...
+150  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::unary`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1355:45
+     |
+1355 |             self.inner.streaming(req, path, codec).await
+     |                        ---------            ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1355:13
+     |
+1355 |             self.inner.streaming(req, path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1355:52
+     |
+1355 |             self.inner.streaming(req, path, codec).await
+     |                                                    ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest, _>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1355:45
+     |
+1355 |             self.inner.streaming(req, path, codec).await
+     |                        ---------            ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeResponse`, which is required by `ProstCodec<_, _>: Codec`
+     |                        |
+     |                        required by a bound introduced by this call
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<StreamingRecognizeRequest, StreamingRecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+     = note: the full name for the type has been written to '/home/sankar/projects/loony-rs/target/release/deps/loony_rs-38360343e0bb5211.long-type-6810928860267311935.txt'
+     = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1355:13
+     |
+1355 |             self.inner.streaming(req, path, codec).await
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeResponse`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<StreamingRecognizeRequest, StreamingRecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+     = note: the full name for the type has been written to '/home/sankar/projects/loony-rs/target/release/deps/loony_rs-38360343e0bb5211.long-type-6810928860267311935.txt'
+     = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeResponse: prost::message::Message` is not satisfied
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1355:52
+     |
+1355 |             self.inner.streaming(req, path, codec).await
+     |                                                    ^^^^^ the trait `prost::message::Message` is not implemented for `grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeResponse`, which is required by `ProstCodec<grpc::google::cloud::speechtotext::v1p1beta1::StreamingRecognizeRequest, _>: Codec`
+     |
+     = help: the following other types implement trait `prost::message::Message`:
+               ()
+               Box<M>
+               Vec<u8>
+               bool
+               f32
+               f64
+               i32
+               i64
+             and 4 others
+     = note: required for `ProstCodec<StreamingRecognizeRequest, StreamingRecognizeResponse>` to implement `Codec`
+note: required by a bound in `tonic::client::Grpc::<T>::streaming`
+    --> /home/sankar/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tonic-0.8.3/src/client/grpc.rs:226:12
+     |
+215  |     pub async fn streaming<S, M1, M2, C>(
+     |                  --------- required by a bound in this associated function
+...
+226  |         C: Codec<Encode = M1, Decode = M2>,
+     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `Grpc::<T>::streaming`
+     = note: the full name for the type has been written to '/home/sankar/projects/loony-rs/target/release/deps/loony_rs-38360343e0bb5211.long-type-6810928860267311935.txt'
+     = note: consider using `--verbose` to print the full type name to the console
+
+error[E0599]: no method named `max_decoding_message_size` found for struct `tonic::client::Grpc` in the current scope
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:231:37
+    |
+231 |             self.inner = self.inner.max_decoding_message_size(limit);
+    |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `Grpc<T>`
+
+error[E0599]: no method named `max_encoding_message_size` found for struct `tonic::client::Grpc` in the current scope
+   --> loony-rs/src/api/../grpc_stubs/google.longrunning.rs:239:37
+    |
+239 |             self.inner = self.inner.max_encoding_message_size(limit);
+    |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `Grpc<T>`
+
+error[E0599]: no method named `max_decoding_message_size` found for struct `tonic::client::Grpc` in the current scope
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1250:37
+     |
+1250 |             self.inner = self.inner.max_decoding_message_size(limit);
+     |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `Grpc<T>`
+
+error[E0599]: no method named `max_encoding_message_size` found for struct `tonic::client::Grpc` in the current scope
+    --> loony-rs/src/api/../grpc_stubs/google.cloud.speech.v1p1beta1.rs:1258:37
+     |
+1258 |             self.inner = self.inner.max_encoding_message_size(limit);
+     |                                     ^^^^^^^^^^^^^^^^^^^^^^^^^ method not found in `Grpc<T>`
+
+Some errors have detailed explanations: E0277, E0432, E0599.
+For more information about an error, try `rustc --explain E0277`.
+error: could not compile `loony-rs` (lib) due to 68 previous errors
