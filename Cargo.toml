@@ -1,6 +1,12 @@
 [workspace]
 
-members = ["loony-algo", "loony-tokio", "loony-redis", "loony-rs"]
+members = [
+    "loony-algo",
+    "loony-tokio",
+    "loony-redis",
+    "loony-rs",
+    "loony-search",
+]
 resolver = "2"
 
 exclude = [
